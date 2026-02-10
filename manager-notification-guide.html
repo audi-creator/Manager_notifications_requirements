@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Notification Requirements</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            background: white;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #5a6c7d;
+        }
+
+        .notification-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .notification-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            padding: 25px;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .notification-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 15px;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+
+        .critical-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .critical-note h3 {
+            color: #856404;
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .critical-note p {
+            color: #856404;
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .pmc-info {
+            background: #e8f4f8;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .pmc-info h3 {
+            color: #2c3e50;
+            margin: 0 0 15px 0;
+            font-size: 22px;
+        }
+
+        .pmc-info p {
+            color: #5a6c7d;
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .pmc-badge {
+            display: inline-block;
+            background: #5B7C99;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .notification-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Manager Notification Requirements</h1>
+        <p>Contact your direct manager via PMC before logging out for the day when:</p>
+    </div>
+
+    <div class="notification-grid">
+        <div class="notification-card">
+            <div class="card-icon">⏱️</div>
+            <div class="card-title">Extended End-of-Day Tasks</div>
+            <div class="card-description">Time requirements exceed the 15 minutes allotted for end-of-day tasks</div>
+        </div>
+
+        <div class="notification-card">
+            <div class="card-icon">🔧</div>
+            <div class="card-title">Technical Issues</div>
+            <div class="card-description">Technical problems significantly impact job performance or timing</div>
+        </div>
+
+        <div class="notification-card">
+            <div class="card-icon">⚠️</div>
+            <div class="card-title">Unusual Circumstances</div>
+            <div class="card-description">Unexpected situations require deviation from standard procedures</div>
+        </div>
+
+        <div class="notification-card">
+            <div class="card-icon">❓</div>
+            <div class="card-title">Policy Uncertainty</div>
+            <div class="card-description">You're unclear about proper job code selection or policy application</div>
+        </div>
+    </div>
+
+    <div class="critical-note">
+        <h3>
+            <span>📢</span>
+            <span>Timing is Critical</span>
+        </h3>
+        <p>Always notify your manager <strong>before logging out for the day</strong>. Proactive communication helps management make necessary adjustments and ensures proper timecard documentation.</p>
+    </div>
+
+    <div class="pmc-info">
+        <h3>How to Notify Your Manager</h3>
+        <p>Use your Private Manager Channel (PMC) in Slack</p>
+        <div class="pmc-badge">📱 PMC - Private Manager Channel</div>
+    </div>
+</body>
+</html>
